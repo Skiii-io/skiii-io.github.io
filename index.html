@@ -14,6 +14,7 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
 	</head>
 	<body class="is-loading">
 
@@ -28,17 +29,31 @@
 						</header>
 						<hr />
 						<h2>Login</h2>
-						<form method="post" action="#">
-							<div class="field">
-								<input type="text" name="name" id="username" placeholder="Username" />
-							</div>
-							<div class="field">
-								<input type="password" name="email" id="Password" placeholder="Password" />
-							</div>
+						<script>
+						    function onSuccess(googleUser) {
+						      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+						    }
+						    function onFailure(error) {
+						      console.log(error);
+						    }
+						    function renderButton() {
+						      gapi.signin2.render('my-signin2', {
+							'scope': 'profile email',
+							'width': 240,
+							'height': 50,
+							'longtitle': true,
+							'theme': 'dark',
+							'onsuccess': onSuccess,
+							'onfailure': onFailure
+						      });
+						    }
+						  </script>
+
+						  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
 							<ul class="actions">
-								<li><a href="#" class="button">Login</a></li>
+								<a href="#" class="button">Continue as Guest</a></li>
 							</ul>
-						</form>
 						<hr />
 					</section>
 

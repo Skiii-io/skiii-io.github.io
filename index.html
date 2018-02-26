@@ -14,7 +14,8 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		<meta name="google-signin-client_id" content="511548684841-rfue5bbku9ako1h1jh6tf905uptjfldv.apps.googleusercontent.com">
 	</head>
 	<body class="is-loading">
 
@@ -29,29 +30,17 @@
 						</header>
 						<hr />
 						<h2>Login</h2>
+						<p><div class="g-signin2" data-onsuccess="onSignIn" align="center"></div></p>
 						<script>
-						    function onSuccess(googleUser) {
-						      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-						    }
-						    function onFailure(error) {
-						      console.log(error);
-						    }
-						    function renderButton() {
-						      gapi.signin2.render('my-signin2', {
-							'scope': 'profile email',
-							'width': 240,
-							'height': 50,
-							'longtitle': true,
-							'theme': 'dark',
-							'onsuccess': onSuccess,
-							'onfailure': onFailure
-						      });
-						    }
-						  </script>
-
-						  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-
-							<ul class="actions">
+							function onSignIn(googleUser) {
+                            var profile = googleUser.getBasicProfile();
+                            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                            console.log('Name: ' + profile.getName());
+                            console.log('Image URL: ' + profile.getImageUrl());
+                            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+                        }
+						</script>
+						<ul class="actions">
 								<a href="#" class="button">Continue as Guest</a></li>
 							</ul>
 						<hr />
@@ -60,7 +49,7 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="copyright">
-							<li>&copy; Daniel Milnes & Jordan Painter</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; <a href="https://daniel-milnes.uk">Daniel Milnes</a> & Jordan Painter</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</footer>
 

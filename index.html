@@ -14,8 +14,7 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script src="https://apis.google.com/js/platform.js" async defer></script>
-		<meta name="google-signin-client_id" content="511548684841-rfue5bbku9ako1h1jh6tf905uptjfldv.apps.googleusercontent.com">
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 	</head>
 	<body class="is-loading">
 
@@ -30,18 +29,20 @@
 						</header>
 						<hr />
 						<h2>Login</h2>
-						<p><div class="g-signin2" data-onsuccess="onSignIn" align="center"></div></p>
-						<script>
-							function onSignIn(googleUser) {
-                            var profile = googleUser.getBasicProfile();
-                            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-                            console.log('Name: ' + profile.getName());
-                            console.log('Image URL: ' + profile.getImageUrl());
-                            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-                        }
-						</script>
 						<ul class="actions">
-								<a href="#" class="button">Continue as Guest</a></li>
+							<p><input id="txtEmail" type="email" placeholder="Email">
+
+							<input id="txtPassword" type="password" placeholder="Password">
+
+							<button id="btnLogin" class="btn btn-action">Log in</button>
+
+							<button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
+
+							<button id="btnLogout" class="btn btn-action hide" style="none">Log out</button></p>
+
+							<p><a id="fun" class="button">Continue as Guest</a></li></p>
+
+							<p><a href="auth/resetpassword.html" id="fun" class="button">Reset Password</a></li></p>
 							</ul>
 						<hr />
 					</section>
@@ -56,6 +57,9 @@
 			</div>
 
 		<!-- Scripts -->
+        <!-- Load App Script -->
+        <script src="login.js"></script>
+        <!-- Template Stuff -->
 			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
 			<script>
 				if ('addEventListener' in window) {

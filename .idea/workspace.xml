@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2636dfcb-8de5-452d-a84d-e0e4d6da6aab" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="2636dfcb-8de5-452d-a84d-e0e4d6da6aab" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +14,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+            <state relative-caret-position="884">
+              <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -28,8 +23,8 @@
       <file leaf-file-name="login.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+            <state relative-caret-position="26">
+              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -81,6 +76,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -92,7 +88,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -132,11 +127,12 @@
       <workItem from="1523368299843" duration="615000" />
       <workItem from="1523550068736" duration="1486000" />
       <workItem from="1523551576649" duration="5227000" />
+      <workItem from="1523602720625" duration="129000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10371000" />
+    <option name="totallyTimeSpent" value="10500000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -169,6 +165,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -207,15 +217,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+        <state relative-caret-position="884">
+          <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+        <state relative-caret-position="26">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
         </state>
       </provider>
     </entry>

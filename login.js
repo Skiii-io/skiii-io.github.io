@@ -18,6 +18,9 @@
 	const btnLogin = document.getElementById("btnLogin");
 	const btnSignUp = document.getElementById("btnSignUp");
 	const btnLogout = document.getElementById("btnLogout");
+	const btnGuest = document.getElementById("btnGuest");
+	const btnReset = document.getElementById("btnReset");
+	var loginMessage = "asd";
 
 	// Add login event
 	btnLogin.addEventListener('click', e => {
@@ -27,7 +30,9 @@
 		const auth = firebase.auth();
 		// Sign in
 		const promise = auth.signInWithEmailAndPassword(email,pass);
-	promise.catch(e => console.log(e.message));
+	promise.catch(e => {
+		alert(e.message);
+	});
 	})
 
 	// Add singup event
@@ -38,11 +43,19 @@
 		const auth = firebase.auth();
 		// Sign in
 		const promise = auth.createUserWithEmailAndPassword(email,pass);
-	promise.catch(e => console.log(e));
+	promise.catch(e => {
+		alert(e.message);
+	});
 	})
 
 	btnLogout.addEventListener('click', e => {
 		firebase.auth().signOut();
+	})
+
+	btnGuest.addEventListener("click",e => {
+		const auth = firebase.auth()
+		const promise = auth.signInAnonymously();
+		promise.catch(e => console.log(e));
 	})
 
 	// Add a realtime listener
@@ -52,15 +65,20 @@
 			btnLogout.style.display = "";
 			btnLogin.style.display = "none";
 			btnSignUp.style.display = "none";
+			btnGuest.style.display = "none";
+			btnReset.style.display = "none";
 			txtEmail.style.display = "none";
 			txtPassword.style.display = "none";
 			txtEmail.value = "";
 			txtPassword.value = "";
+			window.location.replace("/auth/info.html")
 		} else {
 			console.log("Not logged in");
 			btnLogout.style.display = "none";
 			btnLogin.style.display = "";
 			btnSignUp.style.display = "";
+			btnGuest.style.display = "";
+			btnReset.style.display = "";
 			txtEmail.style.display = "";
 			txtPassword.style.display = "";
 		}

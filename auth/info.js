@@ -31,7 +31,7 @@
         signUpForm.style.display = "none";
       }
 		} else {
-      window.location.replace("../")
+      window.location.replace("/")
 		}
   })
 

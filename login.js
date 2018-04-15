@@ -71,7 +71,7 @@
 			txtPassword.style.display = "none";
 			txtEmail.value = "";
 			txtPassword.value = "";
-			window.location.replace("/auth/info.html")
+			window.location.replace("/homepage.html")
 		} else {
 			console.log("Not logged in");
 			btnLogout.style.display = "none";

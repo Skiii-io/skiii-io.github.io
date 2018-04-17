@@ -15,6 +15,11 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+		<style>
+		ul#menu li {
+				display:inline;
+		}
+		</style>
 	</head>
 	<body class="is-loading">
 
@@ -32,11 +37,21 @@
 						<ul class="actions">
 							<p><input id="txtEmail" type="email" placeholder="Email">
 
-							<input id="txtPassword" type="password" placeholder="Password">
+							<input id="txtPassword" type="password" placeholder="Password"><br>
 
 							<button id="btnLogin" class="btn btn-action" type="submit">Log in</button>
 
 							<button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
+
+							<class id="registerForm">
+								<input id="txtUsername" type="text" placeholder="Username"><br>
+								<ul type="menu">
+									<li><button style="height:130px;"><img src="/images/skiers/skier-1.png"></button></li>
+									<li><button style="height:130px;"><img src="/images/skiers/skier-2.png"></button></li>
+									<li><button style="height:130px;"><img src="/images/skiers/skier-3.png"></button></li>
+									<li><button style="height:130px;"><img src="/images/skiers/skier-4.png"></button></li>
+								</ul>
+							</class>
 
 							<button id="btnLogout" class="btn btn-action hide" style="none">Log out</button></p>
 

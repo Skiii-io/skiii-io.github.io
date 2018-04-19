@@ -21,6 +21,6 @@
     const email = txtEmail.value;
     const auth = firebase.auth();
     const promise = auth.sendPasswordResetEmail(email)
-    promise.catch(e => console.log(e));
+    promise.catch(e => alert(e.message));
   })
 })()

@@ -20,7 +20,6 @@
 	const btnLogout = document.getElementById("btnLogout");
 	const btnGuest = document.getElementById("btnGuest");
 	const btnReset = document.getElementById("btnReset");
-	var loginMessage = "asd";
 
 	// Add login event
 	btnLogin.addEventListener('click', e => {

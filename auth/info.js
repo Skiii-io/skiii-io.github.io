@@ -26,6 +26,8 @@
 			if (firebaseUser.isAnonymous){
         guestMessage.innerText = "You are logged in as a Guest.\n Please create a full account to access all the features of Skiii.io";
         btnReset.style.display = "none";
+      } else if (firebaseUser && firebaseUser.displayName == null) {
+        window.location.replace("/auth/creation.html")
       } else {
         txtUserEmail.innerText = ("Email Address: " + emailAddress);
         signUpForm.style.display = "none";
@@ -39,7 +41,7 @@
     var credential = firebase.auth.EmailAuthProvider.credential(txtEmail.value,txtPassword.value);
     firebase.auth().currentUser.linkWithCredential(credential).then(function(user) {
       console.log("Anonymous account successfully upgraded", user);
-      location.reload();
+      window.location.replace("/auth/creation.html");
     }, function(error) {
       console.log("Error upgrading anonymous account", error);
     });

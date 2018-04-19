@@ -23,4 +23,14 @@
     const promise = auth.sendPasswordResetEmail(email)
     promise.catch(e => alert(e.message));
   })
+
+  firebase.auth().onAuthStateChanged(firebaseUser => {
+		if (firebaseUser) {
+      if (firebaseUser && firebaseUser.displayName == null) {
+        window.location.replace("/auth/creation.html")
+      } else if (firebaseUser && firebaseUser.displayName != null){
+        window.location.replace("/homepage.html")
+      }
+		}
+  })
 })()

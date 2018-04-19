@@ -50,7 +50,8 @@
       user.updateProfile({
         displayName: txtUsername.value,
         photoURL: ("https://skiii-io.github.io/images/skiers/skier-" + (selectedSkin++) + ".png")
-      })
+      });
+			window.location.replace("/homepage.html");
     } else {
       alert("Please pick a username");
     }
@@ -60,6 +61,11 @@
 	firebase.auth().onAuthStateChanged(firebaseUser => {
     user = firebaseUser;
     console.log(firebaseUser);
+		if (firebaseUser && firebaseUser.displayName != null) {
+			window.location.replace("/homepage.html")
+		} else if (!firebaseUser) {
+			window.location.replace("/");
+		}
 	})
 
 })()

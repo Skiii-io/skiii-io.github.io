@@ -13,6 +13,7 @@
 	firebase.initializeApp(config);
 
   const btnLogout = document.getElementById("btnLogout");
+	var user;
 
   btnLogout.addEventListener('click', e => {
 		firebase.auth().signOut();
@@ -20,7 +21,9 @@
 
   // Add a realtime listener
 	firebase.auth().onAuthStateChanged(firebaseUser => {
-    if (!firebaseUser) {
+		if (firebaseUser && firebaseUser.displayName == null) {
+			window.location.replace("/auth/creation.html")
+		} else if (!firebaseUser) {
       window.location.replace("/");
     }
   });

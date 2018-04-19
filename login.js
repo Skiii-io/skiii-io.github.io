@@ -43,7 +43,10 @@
 		// Sign in
 		const promise = auth.createUserWithEmailAndPassword(email,pass);
 	promise.catch(e => {
-		alert(e.message);
+				e.updateProfile({
+					displayName: ("Guest#" + (Math.floor(Math.random() * 1000000) + 1)),
+					photoURL: ("https://skiii-io.github.io/images/skiers/skier-" + (Math.floor(Math.random() * 3)) + ".png")
+				})
 	});
 	})
 

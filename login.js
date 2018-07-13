@@ -62,7 +62,19 @@
 
 	// Add a realtime listener
 	firebase.auth().onAuthStateChanged(firebaseUser => {
-		if (firebaseUser) {
+		if (firebaseUser && firebaseUser.displayName == null) {
+				console.log(firebaseUser);
+				btnLogout.style.display = "";
+				btnLogin.style.display = "none";
+				btnSignUp.style.display = "none";
+				btnGuest.style.display = "none";
+				btnReset.style.display = "none";
+				txtEmail.style.display = "none";
+				txtPassword.style.display = "none";
+				txtEmail.value = "";
+				txtPassword.value = "";
+				window.location.replace("/auth/creation.html")	
+		} else if (firebaseUser) {
 			console.log(firebaseUser);
 			btnLogout.style.display = "";
 			btnLogin.style.display = "none";
@@ -74,18 +86,6 @@
 			txtEmail.value = "";
 			txtPassword.value = "";
 			window.location.replace("/homepage.html")
-		} else if (firebaseUser && firebaseUser.displayName == null) {
-				console.log(firebaseUser);
-				btnLogout.style.display = "";
-				btnLogin.style.display = "none";
-				btnSignUp.style.display = "none";
-				btnGuest.style.display = "none";
-				btnReset.style.display = "none";
-				txtEmail.style.display = "none";
-				txtPassword.style.display = "none";
-				txtEmail.value = "";
-				txtPassword.value = "";
-				window.location.replace("/auth/creation.html")
 		} else {
 			console.log("Not logged in");
 			btnLogout.style.display = "none";

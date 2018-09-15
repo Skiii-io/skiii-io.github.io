@@ -24,13 +24,15 @@
     promise.catch(e => alert(e.message));
   })
 
-  firebase.auth().onAuthStateChanged(firebaseUser => {
+  // Add a realtime listener
+	firebase.auth().onAuthStateChanged(function(firebaseUser) {
+		console.log(firebaseUser)
 		if (firebaseUser) {
-      if (firebaseUser && firebaseUser.displayName == null) {
-        window.location.replace("/auth/creation.html")
-      } else if (firebaseUser && firebaseUser.displayName != null){
-        window.location.replace("/homepage.html")
-      }
+			if (firebaseUser.displayName != null) {
+				window.location.replace("/homepage.html")
+			}
+		} else {
+			window.location.replace("/")
 		}
-  })
+	})
 })()

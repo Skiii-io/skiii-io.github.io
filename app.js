@@ -19,13 +19,16 @@
 		firebase.auth().signOut();
 	})
 
-  // Add a realtime listener
-	firebase.auth().onAuthStateChanged(firebaseUser => {
-		if (firebaseUser && firebaseUser.displayName == null) {
-			window.location.replace("/auth/creation.html")
-		} else if (!firebaseUser) {
-      window.location.replace("/");
-    }
-  });
+	// Add a realtime listener
+	firebase.auth().onAuthStateChanged(function(firebaseUser) {
+		console.log(firebaseUser)
+		if (firebaseUser) {
+			if (firebaseUser.displayName != null) {
+				window.location.replace("/homepage.html")
+			}
+		} else {
+			window.location.replace("/")
+		}
+	})
 
 })()

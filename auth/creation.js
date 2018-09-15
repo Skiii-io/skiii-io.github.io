@@ -45,9 +45,11 @@
 	});
 
   btnComplete.addEventListener('click', e => {
-    console.log(txtUsername.value);
     if (txtUsername.value != ""){
-      user.updateProfile({
+			let firebaseUser = firebase.auth().currentUser;
+			console.log ("Trying to set display name to " + txtUsername.value)
+			console.log ("Trying to set profile picture to " + selectedSkin)
+      firebase.auth().currentUser.updateProfile({
         displayName: txtUsername.value,
         photoURL: ("https://skiii-io.github.io/images/skiers/skier-" + (selectedSkin++) + ".png")
       });

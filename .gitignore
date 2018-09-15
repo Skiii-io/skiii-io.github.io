@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/windows,jetbrains
 
 ### JetBrains ###
@@ -104,3 +103,4 @@ $RECYCLE.BIN/
 
 
 # End of https://www.gitignore.io/api/windows,jetbrains
+.idea
